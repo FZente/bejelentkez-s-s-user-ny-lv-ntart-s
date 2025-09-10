@@ -15,3 +15,30 @@ function registration() {
     return;
   }
 }
+
+function login() {
+  let log_email = document.getElementById("log_email").value;
+  let log_pass = document.getElementById("log_pass").value;
+
+  let joEmail = log_email.includes("@");
+
+  if (!joEmail) {
+    alert("Helytelen email vagy jelszó!");
+    return;
+  }
+
+  if (reg_pass !== reg_rep_pass) {
+    alert("Helytelen email vagy jelszó!");
+    return;
+  }
+}
+
+function showRegistration() {
+  document.querySelector(".reg").style.display = "block";
+  document.querySelector(".log").style.display = "none";
+}
+
+function showLogin() {
+  document.querySelector(".reg").style.display = "none";
+  document.querySelector(".log").style.display = "block";
+}

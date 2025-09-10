@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="top-right-buttons">
+        <button onclick="showRegistration()">Regisztráció</button>
+        <button onclick="showLogin()">Bejelentkezés</button>
+    </div>
+
     <div class="log" style="display:none">
         <h1>Log in</h1>
         <p>Email: </p>
         <input type="text" id="log_email">
         <p>password: </p>
         <input type="password" id="log_pass"><br>
-        <button>Log in</button><br>
-        <a>Registration</a>
+        <button onclick="login()">Log in</button><br>
     </div>
 
-    <div class="reg" >
+    <div class="reg" style="display:none">
         <h1>Registration</h1>
         <p>Email: </p>
         <input type="text" id="reg_email">
@@ -26,7 +30,6 @@
         <p>Repeat password: </p>
         <input type="password" id="reg_rep_pass"><br>
         <button onclick="registration()">Registration</button><br>
-        <a>Log in</a>
     </div>
     <script src="login.js"></script>
 </body>
